@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1025748695217",
+    "project_id": "cinema-time-cad27",
+    "storage_bucket": "cinema-time-cad27.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1025748695217:android:cdcf227d2814c6f5eb0a90",
+        "android_client_info": {
+          "package_name": "com.example.curve_navbar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlOP_AFvdi7CveGLX5Z6_V2FlO0w3Qs-Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
