@@ -2,7 +2,7 @@ import 'package:curve_navbar/Models/movie_model.dart';
 import 'package:curve_navbar/screens/main/detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'dart:async'; 
+import 'dart:async';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -15,7 +15,7 @@ class _SearchMoviesPageState extends State<SearchScreen> {
   List<Movie> filteredMovies = [];
   TextEditingController searchController = TextEditingController();
   String searchMessage = '';
-  
+
   Timer? _debounce; // For debouncing search input
 
   @override
@@ -27,7 +27,7 @@ class _SearchMoviesPageState extends State<SearchScreen> {
 
   void searchMovies(String query) {
     query = query.trim(); // Handle whitespace
-    
+
     if (query.isEmpty) {
       setState(() {
         filteredMovies = List.from(availableMovie);
@@ -39,8 +39,7 @@ class _SearchMoviesPageState extends State<SearchScreen> {
     final searchLower = query.toLowerCase();
     final results = availableMovie.where((movie) {
       final titleLower = movie.title.toLowerCase();
-      final genreLower = movie.genre.toLowerCase();
-      return titleLower.contains(searchLower) || genreLower.contains(searchLower);
+      return titleLower.contains(searchLower);
     }).toList();
 
     setState(() {
@@ -141,7 +140,8 @@ class _SearchMoviesPageState extends State<SearchScreen> {
                                   const SizedBox(width: 10),
                                   Expanded(
                                     child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
                                         Text(
                                           movie.title,

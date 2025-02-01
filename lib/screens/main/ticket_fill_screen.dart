@@ -16,7 +16,7 @@ class TicketFillScreen extends StatelessWidget {
   }
 
   Stream<QuerySnapshot> getData(User? user) {
-   return FirebaseFirestore.instance
+    return FirebaseFirestore.instance
         .collection('Tickets')
         .doc(user!.email)
         .collection('UserTickets')
