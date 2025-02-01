@@ -1,4 +1,5 @@
-# curve_navbar
+# Smart-Cinema-Ticket-Booking-App
+
 
 A new Flutter project.
 
