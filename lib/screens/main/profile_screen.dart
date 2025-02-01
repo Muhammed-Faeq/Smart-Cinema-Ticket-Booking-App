@@ -16,15 +16,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
     final String currentUserEmail =
         FirebaseAuth.instance.currentUser?.email ?? '';
 
-    if (currentUserEmail.isEmpty) {
-      return Scaffold(
-        appBar: AppBar(
-          title: const Text('Profile'),
-        ),
-        body: const Center(child: CircularProgressIndicator()),
-      );
-    }
-
     return Scaffold(
       backgroundColor: const Color(0xFF090E17),
       appBar: AppBar(
@@ -45,7 +36,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       body: StreamBuilder<DocumentSnapshot>(
         stream: FirebaseFirestore.instance
             .collection('user')
-            .doc(currentUserEmail) // Using the email as document ID
+            .doc(currentUserEmail)
             .snapshots(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
@@ -156,7 +147,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   onPressed: () {
                     FirebaseAuth.instance.signOut();
-                    
                   },
                   child: const Center(
                     child: Text(

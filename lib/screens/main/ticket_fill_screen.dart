@@ -15,6 +15,15 @@ class TicketFillScreen extends StatelessWidget {
         .delete();
   }
 
+  Stream<QuerySnapshot> getData(User? user) {
+   return FirebaseFirestore.instance
+        .collection('Tickets')
+        .doc(user!.email)
+        .collection('UserTickets')
+        .orderBy('Timestamp', descending: true)
+        .snapshots();
+  }
+
   @override
   Widget build(BuildContext context) {
     final User? user = FirebaseAuth.instance.currentUser;
@@ -46,12 +55,7 @@ class TicketFillScreen extends StatelessWidget {
         ),
       ),
       body: StreamBuilder<QuerySnapshot>(
-        stream: FirebaseFirestore.instance
-            .collection('Tickets')
-            .doc(user.email)
-            .collection('UserTickets')
-            .orderBy('Timestamp', descending: true)
-            .snapshots(),
+        stream: getData(user),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(
