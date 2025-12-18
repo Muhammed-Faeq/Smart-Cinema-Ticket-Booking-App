@@ -1,17 +1,54 @@
-# Smart-Cinema-Ticket-Booking-App
+# 🎬 Smart Cinema Ticket Booking App
 
+Smart Cinema Ticket Booking App is a user-friendly Flutter mobile application designed to simplify the process of booking movie tickets. Users can easily browse movies, view showtimes, select seats in real time, and complete secure online payments.
 
-A new Flutter project.
+---
 
-## Getting Started
+## ✨ Features
 
-This project is a starting point for a Flutter application.
+- 🎥 Browse available movies
+- ⏰ View movie showtimes
+- 💺 Real-time seat selection and availability
+- 💳 Secure online payment
+- 📱 Clean and intuitive UI
+- 🔄 Real-time updates
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 📸 Screenshots
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<p float="left">
+  <img src="screenshots/home.png" width="200" />
+  <img src="screenshots/movie_details.png" width="200" />
+  <img src="screenshots/seat_selection.png" width="200" />
+  <img src="screenshots/payment.png" width="200" />
+</p>
+
+> 📌 Replace image names with your actual screenshot file names
+
+---
+
+## 🛠️ Technologies Used
+
+- Flutter
+- Dart
+- REST API (if applicable)
+- State Management (Provider / Bloc / setState)
+- Payment Integration (if applicable)
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Flutter SDK
+- Android Studio or VS Code
+- Android Emulator or Physical Device
+
+### Installation
+
+```bash
+git clone https://github.com/your-username/Smart-Cinema-Ticket-Booking-App.git
+cd Smart-Cinema-Ticket-Booking-App
+flutter pub get
+flutter run
