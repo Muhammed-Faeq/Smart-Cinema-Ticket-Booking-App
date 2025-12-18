@@ -16,7 +16,7 @@ Smart Cinema Ticket Booking App is a user-friendly Flutter mobile application de
 ---
 
 ## 📸 Screenshots
-![login](https://github.com/user-attachments/assets/bf924358-b38c-4faa-8703-b81984f21e81)
+<img src="https://github.com/user-attachments/assets/bf924358-b38c-4faa-8703-b81984f21e81" width="220" />
 
 <p float="left">
   <img src="screenshots/home.png" width="200" />
